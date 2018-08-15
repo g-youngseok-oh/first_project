@@ -5,25 +5,25 @@
             <!--801px以上の端末用メニュー-->
             <nav id="menubar">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="company.html">COMPANY</a></li>
-                    <li><a href="service.html">SERVICE</a>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/company">COMPANY</a></li>
+                    <li><a href="/service">SERVICE</a>
                         <ul class="ddmenu">
-                            <li><a href="service1.html">SERVICE:1</a></li>
-                            <li><a href="service2.html">SERVICE:2</a></li>
-                            <li><a href="service3.html">SERVICE:3</a></li>
+                            <li><a href="/service/1">SERVICE:1</a></li>
+                            <li><a href="/service/2">SERVICE:2</a></li>
+                            <li><a href="/service/3">SERVICE:3</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
                 </ul>
             </nav>
             <!--800px以下の端末用メニュー-->
             <nav id="menubar-s">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="company.html">COMPANY</a></li>
-                    <li><a href="service.html">SERVICE</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="/index">HOME</a></li>
+                    <li><a href="/company">COMPANY</a></li>
+                    <li><a href="/service">SERVICE</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
