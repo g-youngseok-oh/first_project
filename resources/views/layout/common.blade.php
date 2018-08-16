@@ -3,7 +3,7 @@
 <head>
     @yield('head')
 </head>
-<body @yield('main_id')>
+<body id="@yield('main_id')">
 
 @yield('header')
 
