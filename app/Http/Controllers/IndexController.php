@@ -9,12 +9,14 @@ class IndexController extends Controller
 {
     public function index()
     {
-        // Frameworksモデルのインスタンス化
+        // Noticeモデルのインスタンス化
         $notice = new Notice();
+
         // データ取得
-        $notice_list = $notice->getList();
+        $notice = $notice->getList()->setNewTag();
+
 
         // ビューを返す
-        return view('index', ['notice_list' => $notice_list]);
+        return view('index', ['notice_list' => $notice->data_list]);
     }
 }
