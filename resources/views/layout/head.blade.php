@@ -1,31 +1,19 @@
-@section('header')
-    <header>
-        <div class="inner">
-            <h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="SAMPLE LOGO"></a></h1>
-            <!--801px以上の端末用メニュー-->
-            <nav id="menubar">
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/company">COMPANY</a></li>
-                    <li><a href="/service">SERVICE</a>
-                        <ul class="ddmenu">
-                            <li><a href="/service/1">SERVICE:1</a></li>
-                            <li><a href="/service/2">SERVICE:2</a></li>
-                            <li><a href="/service/3">SERVICE:3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/contact">CONTACT</a></li>
-                </ul>
-            </nav>
-            <!--800px以下の端末用メニュー-->
-            <nav id="menubar-s">
-                <ul>
-                    <li><a href="/index">HOME</a></li>
-                    <li><a href="/company">COMPANY</a></li>
-                    <li><a href="/service">SERVICE</a></li>
-                    <li><a href="/contact">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+@section('head')
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@yield('title')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="@yield('description')">
+    <meta name="keywords" content="@yield('keywords')">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/openclose.js"></script>
+    <script type="text/javascript" src="js/ddmenu_min.js"></script>
+    <script src="//kitchen.juicer.cc/?color=b9UOB15gPXM=" async></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <style>
+        #menubar ul.ddmenu {display:none;}
+    </style>
+    <![endif]-->
 @endsection
