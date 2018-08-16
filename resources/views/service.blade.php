@@ -3,6 +3,7 @@
 @section('title', 'ページタイトル')
 @section('keywords', 'A,B,C')
 @section('description', '説明文')
+@section('main_id', '')
 
 
 @include('layout.head')

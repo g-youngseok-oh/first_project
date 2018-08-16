@@ -3,7 +3,7 @@
 @section('title', 'ページタイトル')
 @section('keywords', 'A,B,C')
 @section('description', '説明文')
-
+@section('main_id', 'id="top"')
 
 @include('layout.head')
 
@@ -24,7 +24,7 @@
                 <p>ここに説明文など入れます。サンプルテキスト。サンプルテキスト。サンプルテキスト。<br>
                     サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。<br>
                     サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。</p>
-                <p><a href="company.html">当テンプレートご利用の際は必ずこちらをご一読下さい。</a></p>
+                <p><a href="/company">当テンプレートご利用の際は必ずこちらをご一読下さい。</a></p>
 
             </section>
 

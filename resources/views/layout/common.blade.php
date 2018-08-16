@@ -3,12 +3,13 @@
 <head>
     @yield('head')
 </head>
-<body id="top">
+<body @yield('main_id')>
 
 @yield('header')
 
 @yield('content')
 
 @yield('footer')
+
 </body>
 </html>
