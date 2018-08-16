@@ -41,7 +41,11 @@
                 <dl id="newinfo">
                     @foreach($notice_list as $notice)
                         <dt>{{$notice->created_at}}</dt>
-                        <dd>{{$notice->title}}</dd>
+                        <dd>{{$notice->title}}
+                            @if ($notice->is_new)
+                            <span class="newicon">NEW</span>
+                            @endif
+                        </dd>
                     @endforeach
                 </dl>
             </section>

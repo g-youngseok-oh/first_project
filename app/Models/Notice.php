@@ -26,9 +26,17 @@ class Notice extends Model
 
     public function setNewTag()
     {
+        $now = Carbon::now();
+        $now = $now->format('Y-m-d');
         foreach ($this->data_list as $key => $data) {
-            $created_at = new Carbon(strtotime($data['created_at']));
-            $data['created_at'] = $created_at->format('Y-m-d');
+
+            // 日付フォーマット変更
+            $created_at = new Carbon($data->created_at, 'JST');
+            $data->created_at = $created_at->format('Y-m-d');
+
+            // 今日の書き込みはnew
+            $data->append(array('is_new' => $data->created_at == $now));
+
             $this->data_list[$key] = $data;
         }
         return $this;
