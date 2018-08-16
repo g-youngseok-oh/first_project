@@ -39,22 +39,10 @@
             <section id="new">
                 <h2 id="newinfo_hdr" class="close">更新情報・お知らせ</h2>
                 <dl id="newinfo">
-                    <dt>2017/02/07</dt>
-                    <dd>cssを中心に更新。<span class="newicon">NEW</span></dd>
-                    <dt>2016/06/24</dt>
-                    <dd>tp_biz38公開。</dd>
-                    <dt>20XX/00/00</dt>
-                    <dd>サンプルテキスト。<a href="#">サンプルテキスト。</a>サンプルテキスト。</dd>
-                    <dt>20XX/00/00</dt>
-                    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-                    <dt>20XX/00/00</dt>
-                    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-                    <dt>20XX/00/00</dt>
-                    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-                    <dt>20XX/00/00</dt>
-                    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-                    <dt>20XX/00/00</dt>
-                    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+                    @foreach($notice_list as $notice)
+                        <dt>{{$notice->created_at}}</dt>
+                        <dd>{{$notice->title}}</dd>
+                    @endforeach
                 </dl>
             </section>
 
