@@ -35,7 +35,7 @@ class Notice extends Model
             $data->created_at = $created_at->format('Y-m-d');
 
             // 今日の書き込みはnew
-            $data->append(array('is_new' => $data->created_at == $now));
+            $data->is_new  = ($data->created_at == $now);
 
             $this->data_list[$key] = $data;
         }
