@@ -19,6 +19,7 @@
                 <h2>お問い合わせ</h2>
                 <p><strong class="color1">※以下はフォームサンプルです。フォーム専用のプログラムがないと動作しません</strong>のでご注意下さい。当サイトでもお問い合わせフォーム制作も承っております。<a href="http://template-party.com/file/form.html">詳しくはこちら</a>をご覧下さい。</p>
 
+                <form method="get" action="/send">
                 <table class="ta1 mb1em">
                     <tr>
                         <th colspan="2" class="tamidashi">※マークは入力必須です</th>
@@ -108,6 +109,7 @@
                 <p class="c">
                     <input type="submit" value="内容を確認する">
                 </p>
+                </form>
 
             </section>
 
