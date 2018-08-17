@@ -19,23 +19,23 @@
                 <h2>お問い合わせ</h2>
                 <p><strong class="color1">※以下はフォームサンプルです。フォーム専用のプログラムがないと動作しません</strong>のでご注意下さい。当サイトでもお問い合わせフォーム制作も承っております。<a href="http://template-party.com/file/form.html">詳しくはこちら</a>をご覧下さい。</p>
 
-                <form method="get" action="/send">
+                <form method="post" action="/send/confirm">
                 <table class="ta1 mb1em">
                     <tr>
                         <th colspan="2" class="tamidashi">※マークは入力必須です</th>
                     </tr>
                     <tr>
                         <th>お名前※</th>
-                        <td><input type="text" name="お名前" size="30" class="ws"></td>
+                        <td><input type="text" name="name" size="30" class="ws"></td>
                     </tr>
                     <tr>
                         <th>メールアドレス※</th>
-                        <td><input type="text" name="メールアドレス" size="30" class="ws"></td>
+                        <td><input type="text" name="email" size="30" class="ws"></td>
                     </tr>
                     <tr>
                         <th>ご住所(都道府県)</th>
                         <td>
-                            <select name="ご住所(都道府県)">
+                            <select name="city">
                                 <option value="" selected="selected">都道府県選択</option>
                                 <option value="北海道">北海道</option>
                                 <option value="青森県">青森県</option>
@@ -88,25 +88,26 @@
                     </tr>
                     <tr>
                         <th>ご住所(市区町村以下)</th>
-                        <td><input type="text" name="ご住所(市区町村以下)" size="30" class="wl"></td>
+                        <td><input type="text" name="address" size="30" class="wl"></td>
                     </tr>
                     <tr>
                         <th>お問い合わせ項目※</th>
                         <td>
-                            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目１">お問い合わせ項目１</label><br>
-                            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目２">お問い合わせ項目２</label><br>
-                            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目３">お問い合わせ項目３</label><br>
-                            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目４">お問い合わせ項目４</label><br>
-                            <label><input type="checkbox" name="お問い合わせ項目" value="お問い合わせ項目５">お問い合わせ項目５</label>
+                            <label><input type="checkbox" name="category[]" value="システム開発">システム開発</label><br>
+                            <label><input type="checkbox" name="category[]" value="ホームページ政策">ホームページ政策</label><br>
+                            <label><input type="checkbox" name="category[]" value="システム改修">システム改修</label><br>
+                            <label><input type="checkbox" name="category[]" value="コンサルティング">コンサルティング</label><br>
+                            <label><input type="checkbox" name="category[]" value="見積もり">見積もり</label>
                         </td>
                     </tr>
                     <tr>
                         <th>お問い合わせ詳細※</th>
-                        <td><textarea name="お問い合わせ詳細" cols="30" rows="10" class="wl"></textarea></td>
+                        <td><textarea name="contact" cols="30" rows="10" class="wl"></textarea></td>
                     </tr>
                 </table>
 
                 <p class="c">
+                    {{ csrf_field() }}
                     <input type="submit" value="内容を確認する">
                 </p>
                 </form>

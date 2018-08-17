@@ -30,4 +30,5 @@ Route::get('/contact', function () {
 });
 
 // メール送信
-Route::get('/send', 'SendController@send');
+Route::get('/send/confirm', 'SendController@confirm');
+Route::get('/send/complate', 'SendController@send');
